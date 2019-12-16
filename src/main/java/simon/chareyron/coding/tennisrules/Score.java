@@ -5,33 +5,41 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Score<T> {
-    
-    private T[] orderedScores=initOrderedScores();
+
+    private T[] orderedScores = initOrderedScores();
 
     protected abstract T[] initOrderedScores();
 
-    private Map<Player,T> score=new HashMap();
+    private Map<Player, T> score = new HashMap();
 
 
-    public void nextScoreForPlayer(Player winnerPointPlayer) {
-        T currentScore= getScorePlayer(winnerPointPlayer);
+    public boolean nextScoreForPlayer(Player winnerPointPlayer) {
+        T currentScore = getScorePlayer(winnerPointPlayer);
         int nextScoreIndex = Arrays.asList(orderedScores).indexOf(currentScore);
-        setScorePlayer(winnerPointPlayer,orderedScores[nextScoreIndex+1]);
+        setScorePlayer(winnerPointPlayer, orderedScores[nextScoreIndex + 1]);
+        return isPlayerWon(winnerPointPlayer);
     }
 
-    protected  void previousScoreForPlayer(Player player){
-        T currentScore= getScorePlayer(player);
+
+    public void previousScoreForPlayer(Player player) {
+        T currentScore = getScorePlayer(player);
         int nextScoreIndex = Arrays.asList(orderedScores).indexOf(currentScore);
-        setScorePlayer(player,orderedScores[nextScoreIndex-1]);
+        setScorePlayer(player, orderedScores[nextScoreIndex - 1]);
     }
 
+    public void reset() {
+        setScorePlayer(Player._1, orderedScores[0]);
+        setScorePlayer(Player._2, orderedScores[0]);
+    }
+
+    protected abstract boolean isPlayerWon(Player winnerPointPlayer);
 
     public T getScorePlayer1() {
         return score.get(Player._1);
     }
 
     public void setScorePlayer(Player player, T scorePlayer) {
-        score.put(player,scorePlayer);
+        score.put(player, scorePlayer);
     }
 
     public T getScorePlayer(Player player) {

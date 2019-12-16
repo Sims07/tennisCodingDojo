@@ -11,7 +11,11 @@ public class TennisRules {
     }
 
     public void winPoint(Player winnerPointPlayer) {
-        gameScore.nextScoreForPlayer(winnerPointPlayer);
+        boolean winTheGame = gameScore.nextScoreForPlayer(winnerPointPlayer);
+        if(winTheGame){
+            setScore.nextScoreForPlayer(winnerPointPlayer);
+            gameScore.reset();
+        }
     }
 
     public void setSetScorePlayer1(int setScorePlayer1) {

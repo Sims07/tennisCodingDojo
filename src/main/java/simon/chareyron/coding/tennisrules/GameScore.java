@@ -9,13 +9,23 @@ public class GameScore extends Score<String> {
     }
 
     @Override
-    public void nextScoreForPlayer(Player winnerPointPlayer) {
-        Player loserPlayer = Player._1 == winnerPointPlayer ? Player._2 : Player._1;
+    public boolean nextScoreForPlayer(Player winnerPointPlayer) {
+        boolean winnerPointPlayerWinTheGame = false;
+        Player loserPlayer = getLooserPointPlayer(winnerPointPlayer);
         if (inAdvantageForPlayer(loserPlayer)) {
             super.previousScoreForPlayer(loserPlayer);
         } else {
-            super.nextScoreForPlayer(winnerPointPlayer);
+            winnerPointPlayerWinTheGame = super.nextScoreForPlayer(winnerPointPlayer);
         }
+        return winnerPointPlayerWinTheGame;
+    }
+
+    private Player getLooserPointPlayer(Player winnerPointPlayer) {
+        return Player._1 == winnerPointPlayer ? Player._2 : Player._1;
+    }
+
+    protected boolean isPlayerWon(Player winnerPointPlayer) {
+        return ADVANTAGE.equals(getScorePlayer(winnerPointPlayer)) && !"40".equals(getScorePlayer(getLooserPointPlayer(winnerPointPlayer)));
     }
 
     private boolean inAdvantageForPlayer(Player player) {

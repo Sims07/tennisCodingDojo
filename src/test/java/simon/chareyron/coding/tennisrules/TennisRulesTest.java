@@ -79,6 +79,21 @@ public class TennisRulesTest {
                 .thenGameScoreIs("40-40");
     }
 
+    @Test
+    public void winAPointAndAGame() {
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "40-0")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("1-0")
+                .thenGameScoreIs("0-0");
+
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "0-40")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("0-1")
+                .thenGameScoreIs("0-0");
+    }
+
 
 
 }
