@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e423ae-62ce-45aa-87f1-4a24a82c58ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +23,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1555" />
+          <entry key="JAVA" value="1609" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="28" />
         </counts>
@@ -30,7 +31,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="126">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -69,19 +70,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="200">
+              <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertion.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+            <state relative-caret-position="75">
+              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -89,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/TennisRules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#301#302#0" expanded="true" />
                 <element signature="e#325#326#0" expanded="true" />
@@ -112,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/GameScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="150">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -177,14 +178,14 @@
         <option value="$PROJECT_DIR$/src/test/java/BDDTennisAssertion.java" />
         <option value="$PROJECT_DIR$/src/test/java/TennisRulesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/SetScore.java" />
-        <option value="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Players.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/TennisRules.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Score.java" />
-        <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/GameScore.java" />
         <option value="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertion.java" />
         <option value="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/GameScore.java" />
+        <option value="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java" />
       </list>
     </option>
   </component>
@@ -274,6 +275,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
   </component>
   <component name="RecentsManager">
@@ -297,7 +299,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TennisRulesTest.winAPointFrom0">
+  <component name="RunManager" selected="JUnit.TennisRulesTest">
+    <configuration name="TennisRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tennisCodingDojo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simon.chareyron.coding.tennisrules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simon.chareyron.coding.tennisrules" />
+      <option name="MAIN_CLASS_NAME" value="simon.chareyron.coding.tennisrules.TennisRulesTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TennisRulesTest.nothing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tennisCodingDojo" />
       <option name="PACKAGE_NAME" value="" />
@@ -340,13 +356,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TennisRulesTest.winAPointFrom15" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tennisCodingDojo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simon.chareyron.coding.tennisrules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simon.chareyron.coding.tennisrules" />
+      <option name="MAIN_CLASS_NAME" value="simon.chareyron.coding.tennisrules.TennisRulesTest" />
+      <option name="METHOD_NAME" value="winAPointFrom15" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.TennisRulesTest.nothing" />
       <item itemvalue="JUnit.TennisRulesTest.winAPoint" />
       <item itemvalue="JUnit.TennisRulesTest.winAPointFrom0" />
+      <item itemvalue="JUnit.TennisRulesTest.winAPointFrom15" />
+      <item itemvalue="JUnit.TennisRulesTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TennisRulesTest" />
+        <item itemvalue="JUnit.TennisRulesTest.winAPointFrom15" />
         <item itemvalue="JUnit.TennisRulesTest.winAPointFrom0" />
         <item itemvalue="JUnit.TennisRulesTest.winAPoint" />
         <item itemvalue="JUnit.TennisRulesTest.nothing" />
@@ -364,32 +400,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TennisRulesTest_nothing - 2019.12.15 at 20h 36m 52s.xml">
-      <configuration name="TennisRulesTest.nothing" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 26m 09s.xml">
+    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 46m 39s.xml">
       <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 40m 59s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom0 - 2019.12.15 at 21h 46m 45s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom0" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 42m 22s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom0 - 2019.12.15 at 21h 47m 47s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom0" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 42m 30s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 47m 58s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 42m 34s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 48m 35s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 43m 18s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 49m 35s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 44m 16s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 49m 42s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TennisRulesTest_winAPoint - 2019.12.15 at 21h 45m 01s.xml">
-      <configuration name="TennisRulesTest.winAPoint" configurationId="JUnit" />
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 49m 45s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 50m 02s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TennisRulesTest_winAPointFrom15 - 2019.12.15 at 21h 51m 58s.xml">
+      <configuration name="TennisRulesTest.winAPointFrom15" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -401,12 +440,12 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32861635" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32861635" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32861635" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32861635" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -430,6 +469,18 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/GameScore.java</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/TennisRules.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -438,24 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.jar!/org/assertj/core/api/BDDAssertions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="312" column="56" selection-start-line="312" selection-start-column="56" selection-end-line="312" selection-end-column="56" />
-          <folding>
-            <element signature="e#9765#9766#0" expanded="true" />
-            <element signature="e#9806#9807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -470,27 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/TennisRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -512,24 +524,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/GameScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="150">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/TennisRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.jar!/org/assertj/core/api/BDDAssertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="312" column="56" selection-start-line="312" selection-start-column="56" selection-end-line="312" selection-end-column="56" />
+          <folding>
+            <element signature="e#9765#9766#0" expanded="true" />
+            <element signature="e#9806#9807#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        <state relative-caret-position="200">
+          <caret line="31" column="65" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/BDDTennisAssertions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="75">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
