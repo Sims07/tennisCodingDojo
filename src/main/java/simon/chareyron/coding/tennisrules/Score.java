@@ -19,6 +19,12 @@ public abstract class Score<T> {
         setScorePlayer(winnerPointPlayer,orderedScores[nextScoreIndex+1]);
     }
 
+    protected  void previousScoreForPlayer(Player player){
+        T currentScore= getScorePlayer(player);
+        int nextScoreIndex = Arrays.asList(orderedScores).indexOf(currentScore);
+        setScorePlayer(player,orderedScores[nextScoreIndex-1]);
+    }
+
 
     public T getScorePlayer1() {
         return score.get(Player._1);
@@ -35,5 +41,6 @@ public abstract class Score<T> {
     public T getScorePlayer2() {
         return score.get(Player._2);
     }
+
 
 }
