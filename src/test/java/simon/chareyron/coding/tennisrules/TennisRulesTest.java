@@ -94,6 +94,19 @@ public class TennisRulesTest {
                 .thenGameScoreIs("0-0");
     }
 
+    @Test
+    public void winAPointAndAGameInAdvantage() {
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "Av-40")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("1-0")
+                .thenGameScoreIs("0-0");
 
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "40-Av")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("0-1")
+                .thenGameScoreIs("0-0");
+    }
 
 }

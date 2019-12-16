@@ -14,10 +14,16 @@ public abstract class Score<T> {
 
 
     public boolean nextScoreForPlayer(Player winnerPointPlayer) {
+        boolean winnerPointPlayerWon = false;
         T currentScore = getScorePlayer(winnerPointPlayer);
         int nextScoreIndex = Arrays.asList(orderedScores).indexOf(currentScore);
-        setScorePlayer(winnerPointPlayer, orderedScores[nextScoreIndex + 1]);
-        return isPlayerWon(winnerPointPlayer);
+        if (orderedScores.length > nextScoreIndex + 1) {
+            setScorePlayer(winnerPointPlayer, orderedScores[nextScoreIndex + 1]);
+            winnerPointPlayerWon = isPlayerWon(winnerPointPlayer);
+        } else {
+            winnerPointPlayerWon = true;
+        }
+        return winnerPointPlayerWon;
     }
 
 
