@@ -34,6 +34,21 @@ public class TennisRulesTest {
                 .thenGameScoreIs("0-30");
     }
 
+    @Test
+    public void winAPointFrom30() {
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "30-0")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("0-0")
+                .thenGameScoreIs("40-0");
+
+        BDDTennisAssertions
+                .givenTennisRuleAndInitScore(new TennisRules(), "0-0", "0-30")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("0-0")
+                .thenGameScoreIs("0-40");
+    }
+
 
 
 }
