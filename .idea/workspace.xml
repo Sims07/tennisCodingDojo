@@ -306,7 +306,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TennisRulesTest">
+  <component name="RunManager" selected="JUnit.TennisRulesTest.winAPointFrom4040">
     <configuration name="TennisRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tennisCodingDojo" />
       <extension name="coverage">
@@ -317,22 +317,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="simon.chareyron.coding.tennisrules" />
       <option name="MAIN_CLASS_NAME" value="simon.chareyron.coding.tennisrules.TennisRulesTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TennisRulesTest.winAPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tennisCodingDojo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simon.chareyron.coding.tennisrules.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="simon.chareyron.coding.tennisrules" />
-      <option name="MAIN_CLASS_NAME" value="simon.chareyron.coding.tennisrules.TennisRulesTest" />
-      <option name="METHOD_NAME" value="winAPoint" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -385,20 +369,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TennisRulesTest.winAPointFrom4040" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tennisCodingDojo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="simon.chareyron.coding.tennisrules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="simon.chareyron.coding.tennisrules" />
+      <option name="MAIN_CLASS_NAME" value="simon.chareyron.coding.tennisrules.TennisRulesTest" />
+      <option name="METHOD_NAME" value="winAPointFrom4040" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.TennisRulesTest.winAPoint" />
       <item itemvalue="JUnit.TennisRulesTest.winAPointFrom0" />
       <item itemvalue="JUnit.TennisRulesTest.winAPointFrom15" />
       <item itemvalue="JUnit.TennisRulesTest" />
       <item itemvalue="JUnit.TennisRulesTest.winAPointFrom30" />
+      <item itemvalue="JUnit.TennisRulesTest.winAPointFrom4040" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TennisRulesTest.winAPointFrom4040" />
         <item itemvalue="JUnit.TennisRulesTest" />
         <item itemvalue="JUnit.TennisRulesTest.winAPointFrom30" />
         <item itemvalue="JUnit.TennisRulesTest.winAPointFrom15" />
         <item itemvalue="JUnit.TennisRulesTest.winAPointFrom0" />
-        <item itemvalue="JUnit.TennisRulesTest.winAPoint" />
       </list>
     </recent_temporary>
   </component>
