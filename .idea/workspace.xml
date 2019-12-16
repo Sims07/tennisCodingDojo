@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e423ae-62ce-45aa-87f1-4a24a82c58ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,7 +25,7 @@
         <counts>
           <entry key="JAVA" value="2459" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="XML" value="28" />
+          <entry key="XML" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -38,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="110">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -147,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Score.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -183,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/BDDTennisAssertions.java" />
         <option value="$PROJECT_DIR$/src/test/java/BDDTennisAssertion.java" />
         <option value="$PROJECT_DIR$/src/test/java/TennisRulesTest.java" />
@@ -196,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/SetScore.java" />
         <option value="$PROJECT_DIR$/src/test/java/simon/chareyron/coding/tennisrules/TennisRulesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Score.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -205,6 +205,34 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tennis-score-rules" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tennis-score-rules" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tennis-score-rules" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="coveralls" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tennis-score-rules" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="surefire" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -416,9 +444,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TennisRulesTest_winAPointAndAGame - 2019.12.15 at 22h 27m 31s.xml">
-      <configuration name="TennisRulesTest.winAPointAndAGame" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TennisRulesTest - 2019.12.15 at 22h 27m 39s.xml">
       <configuration name="TennisRulesTest" configurationId="JUnit" />
     </history-entry>
@@ -446,6 +471,9 @@
     <history-entry file="TennisRulesTest - 2019.12.15 at 22h 33m 07s.xml">
       <configuration name="TennisRulesTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TennisRulesTest - 2019.12.15 at 22h 33m 58s.xml">
+      <configuration name="TennisRulesTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="0" />
@@ -453,7 +481,7 @@
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" weight="0.32861635" />
       <window_info anchor="bottom" id="Extract Method" weight="0.32861635" />
@@ -468,7 +496,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info active="true" anchor="right" id="Maven Projects" visible="true" weight="0.32956383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -511,13 +539,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simon/chareyron/coding/tennisrules/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -617,6 +638,13 @@
             <element signature="e#1490#1491#0" expanded="true" />
             <element signature="e#1533#1534#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
         </state>
       </provider>
     </entry>
