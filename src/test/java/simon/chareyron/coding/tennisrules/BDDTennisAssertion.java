@@ -15,22 +15,23 @@ public class BDDTennisAssertion {
     }
 
     public BDDTennisAssertion whenPlayerWinPoint(String winnerPointPlayer) {
-        tennisRules.winPoint(winnerPointPlayer);
+        Player player="1".equals(winnerPointPlayer)?Player._1:Player._2;
+        tennisRules.winPoint(player);
         return this;
     }
 
 
-    public BDDTennisAssertion thenSetScoreIs(String setScore) {
-        String[] setScorePlayers = setScore.split(",");
-        then(tennisRules.getSetScore().getSetScorePlayer1()).isEqualTo(setScorePlayers[0]);
-        then(tennisRules.getSetScore().getSetScorePlayer2()).isEqualTo(setScorePlayers[1]);
+    public BDDTennisAssertion thenSetScoreIs(String expectedSetScore) {
+        String[] setScorePlayers = expectedSetScore.split("-");
+        then(tennisRules.getSetScore().getScorePlayer1().toString()).isEqualTo(setScorePlayers[0]);
+        then(tennisRules.getSetScore().getScorePlayer2().toString()).isEqualTo(setScorePlayers[1]);
         return this;
     }
 
-    public BDDTennisAssertion thenGameScoreIs(String gameScore) {
-        String[] gameScorePlayers = setScore.split(",");
-        then(tennisRules.getGameScore().getSetScorePlayer1()).isEqualTo(gameScorePlayers[0]);
-        then(tennisRules.getGameScore().getSetScorePlayer2()).isEqualTo(gameScorePlayers[1]);
+    public BDDTennisAssertion thenGameScoreIs(String expectedGameScore) {
+        String[] gameScorePlayers = expectedGameScore.split("-");
+        then(tennisRules.getGameScore().getScorePlayer1()).isEqualTo(gameScorePlayers[0]);
+        then(tennisRules.getGameScore().getScorePlayer2()).isEqualTo(gameScorePlayers[1]);
         return this;
     }
 }
