@@ -2,22 +2,23 @@ package simon.chareyron.coding.tennisrules;
 
 public class BDDTennisAssertions {
 
-    public static BDDTennisAssertion givenTennisRuleAndInitScore(TennisRules tennisRules,String setScore, String gameScore) {
-        initSetScore(tennisRules, setScore);
-        initGameScore(tennisRules, gameScore);
-        return new BDDTennisAssertion(tennisRules, setScore, gameScore);
+    public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore) {
+        TennisScore tennisScore = new TennisScore();
+        initSetScore(tennisScore, setScore);
+        initGameScore(tennisScore, gameScore);
+        return new BDDTennisAssertion(new TennisRules(tennisScore), setScore, gameScore);
     }
 
-    private static void initGameScore(TennisRules tennisRules, String gameScore) {
+    private static void initGameScore(TennisScore tennisScore, String gameScore) {
         String[] gameScorePlayers = gameScore.split("-");
-        tennisRules.setGameScorePlayer1(gameScorePlayers[0]);
-        tennisRules.setGameScorePlayer2(gameScorePlayers[1]);
+        tennisScore.setGameScorePlayer1(gameScorePlayers[0]);
+        tennisScore.setGameScorePlayer2(gameScorePlayers[1]);
     }
 
-    private static void initSetScore(TennisRules tennisRules, String setScore) {
+    private static void initSetScore(TennisScore tennisScore, String setScore) {
         String[] setScorePlayers = setScore.split("-");
-        tennisRules.setSetScorePlayer1(Integer.valueOf(setScorePlayers[0]),1);
-        tennisRules.setSetScorePlayer2(Integer.valueOf(setScorePlayers[1]),1);
+        tennisScore.setSetScorePlayer1(Integer.valueOf(setScorePlayers[0]), 1);
+        tennisScore.setSetScorePlayer2(Integer.valueOf(setScorePlayers[1]), 1);
     }
 
 }

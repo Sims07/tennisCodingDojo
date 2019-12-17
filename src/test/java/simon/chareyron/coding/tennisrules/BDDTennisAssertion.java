@@ -26,11 +26,10 @@ public class BDDTennisAssertion {
 
     public BDDTennisAssertion thenSetScoreIs(String... expectedSetScores) {
         AtomicInteger setIndex = new AtomicInteger(1);
-        tennisRules.setSetNumber(expectedSetScores.length);
         Arrays.asList(expectedSetScores).forEach(expectedSetScore -> {
             String[] setScorePlayers = expectedSetScore.split("-");
-            then(tennisRules.getSetScore(setIndex.get()).getScorePlayer1().toString()).isEqualTo(setScorePlayers[0]);
-            then(tennisRules.getSetScore(setIndex.get()).getScorePlayer2().toString()).isEqualTo(setScorePlayers[1]);
+            then(tennisRules.getTennisScore().getSetScore(setIndex.get()).getScorePlayer1().toString()).isEqualTo(setScorePlayers[0]);
+            then(tennisRules.getTennisScore().getSetScore(setIndex.get()).getScorePlayer2().toString()).isEqualTo(setScorePlayers[1]);
             setIndex.getAndIncrement();
         });
         return this;
@@ -38,8 +37,8 @@ public class BDDTennisAssertion {
 
     public BDDTennisAssertion thenGameScoreIs(String expectedGameScore) {
         String[] gameScorePlayers = expectedGameScore.split("-");
-        then(tennisRules.getGameScore().getScorePlayer1()).isEqualTo(gameScorePlayers[0]);
-        then(tennisRules.getGameScore().getScorePlayer2()).isEqualTo(gameScorePlayers[1]);
+        then(tennisRules.getTennisScore().getGameScore().getScorePlayer1()).isEqualTo(gameScorePlayers[0]);
+        then(tennisRules.getTennisScore().getGameScore().getScorePlayer2()).isEqualTo(gameScorePlayers[1]);
         return this;
     }
 }
