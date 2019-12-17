@@ -17,13 +17,17 @@ public abstract class Score<T> {
         boolean winnerPointPlayerWon = false;
         T currentScore = getScorePlayer(winnerPointPlayer);
         int nextScoreIndex = Arrays.asList(orderedScores).indexOf(currentScore);
-        if (orderedScores.length > nextScoreIndex + 1) {
+        if (isNextScoreAvailable(nextScoreIndex)) {
             setScorePlayer(winnerPointPlayer, orderedScores[nextScoreIndex + 1]);
             winnerPointPlayerWon = isPlayerWon(winnerPointPlayer);
         } else {
             winnerPointPlayerWon = true;
         }
         return winnerPointPlayerWon;
+    }
+
+    private boolean isNextScoreAvailable(int nextScoreIndex) {
+        return orderedScores.length > nextScoreIndex + 1;
     }
 
 
