@@ -1,4 +1,4 @@
-package simon.chareyron.coding.tennisrules;
+package simon.chareyron.coding.tennisrules.domain;
 
 public class GameScore extends Score<String> {
 

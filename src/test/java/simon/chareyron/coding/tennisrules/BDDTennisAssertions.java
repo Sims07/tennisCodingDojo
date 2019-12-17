@@ -1,12 +1,15 @@
 package simon.chareyron.coding.tennisrules;
 
+import simon.chareyron.coding.tennisrules.domain.TennisScore;
+import simon.chareyron.coding.tennisrules.usecases.PlayAPointUseCase;
+
 public class BDDTennisAssertions {
 
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore) {
         TennisScore tennisScore = new TennisScore();
         initSetScore(tennisScore, setScore);
         initGameScore(tennisScore, gameScore);
-        return new BDDTennisAssertion(new TennisRules(tennisScore), setScore, gameScore);
+        return new BDDTennisAssertion(new PlayAPointUseCase(tennisScore), setScore, gameScore);
     }
 
     private static void initGameScore(TennisScore tennisScore, String gameScore) {

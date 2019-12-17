@@ -1,4 +1,4 @@
-package simon.chareyron.coding.tennisrules;
+package simon.chareyron.coding.tennisrules.domain;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,5 +1,8 @@
 package simon.chareyron.coding.tennisrules;
 
+import simon.chareyron.coding.tennisrules.domain.Player;
+import simon.chareyron.coding.tennisrules.usecases.PlayAPointUseCase;
+
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -7,11 +10,11 @@ import static org.assertj.core.api.BDDAssertions.then;
 
 public class BDDTennisAssertion {
 
-    private final TennisRules tennisRules;
+    private final PlayAPointUseCase tennisRules;
     private final String setScore;
     private final String gameScore;
 
-    public BDDTennisAssertion(TennisRules tennisRules, String setScore, String gameScore) {
+    public BDDTennisAssertion(PlayAPointUseCase tennisRules, String setScore, String gameScore) {
         this.tennisRules = tennisRules;
         this.setScore = setScore;
         this.gameScore = gameScore;
