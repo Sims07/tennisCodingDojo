@@ -1,5 +1,8 @@
 package simon.chareyron.coding.tennisrules;
 
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static org.assertj.core.api.BDDAssertions.then;
 
 public class BDDTennisAssertion {
@@ -15,16 +18,21 @@ public class BDDTennisAssertion {
     }
 
     public BDDTennisAssertion whenPlayerWinPoint(String winnerPointPlayer) {
-        Player player="1".equals(winnerPointPlayer)?Player._1:Player._2;
+        Player player = "1".equals(winnerPointPlayer) ? Player._1 : Player._2;
         tennisRules.winPoint(player);
         return this;
     }
 
 
-    public BDDTennisAssertion thenSetScoreIs(String expectedSetScore) {
-        String[] setScorePlayers = expectedSetScore.split("-");
-        then(tennisRules.getSetScore().getScorePlayer1().toString()).isEqualTo(setScorePlayers[0]);
-        then(tennisRules.getSetScore().getScorePlayer2().toString()).isEqualTo(setScorePlayers[1]);
+    public BDDTennisAssertion thenSetScoreIs(String... expectedSetScores) {
+        AtomicInteger setIndex = new AtomicInteger(1);
+        tennisRules.setSetNumber(expectedSetScores.length);
+        Arrays.asList(expectedSetScores).forEach(expectedSetScore -> {
+            String[] setScorePlayers = expectedSetScore.split("-");
+            then(tennisRules.getSetScore(setIndex.get()).getScorePlayer1().toString()).isEqualTo(setScorePlayers[0]);
+            then(tennisRules.getSetScore(setIndex.get()).getScorePlayer2().toString()).isEqualTo(setScorePlayers[1]);
+            setIndex.getAndIncrement();
+        });
         return this;
     }
 

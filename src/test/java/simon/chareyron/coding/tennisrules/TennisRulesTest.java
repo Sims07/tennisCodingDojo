@@ -97,4 +97,30 @@ public class TennisRulesTest {
                 .thenGameScoreIs("0-0");
     }
 
+    @Test
+    public void winASetFromSet5ToSet6() {
+        givenTennisRuleAndInitScore(new TennisRules(), "5-4", "40-30")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("6-4","0-0")
+                .thenGameScoreIs("0-0");
+
+        givenTennisRuleAndInitScore(new TennisRules(), "2-5", "30-40")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("2-6","0-0")
+                .thenGameScoreIs("0-0");
+    }
+
+    @Test
+    public void winASetFromSet6ToSet7() {
+        givenTennisRuleAndInitScore(new TennisRules(), "6-5", "40-30")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("7-5","0-0")
+                .thenGameScoreIs("0-0");
+
+        givenTennisRuleAndInitScore(new TennisRules(), "5-6", "30-40")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("5-7","0-0")
+                .thenGameScoreIs("0-0");
+    }
+
 }

@@ -16,8 +16,8 @@ public class BDDTennisAssertions {
 
     private static void initSetScore(TennisRules tennisRules, String setScore) {
         String[] setScorePlayers = setScore.split("-");
-        tennisRules.setSetScorePlayer1(Integer.valueOf(setScorePlayers[0]));
-        tennisRules.setSetScorePlayer2(Integer.valueOf(setScorePlayers[1]));
+        tennisRules.setSetScorePlayer1(Integer.valueOf(setScorePlayers[0]),1);
+        tennisRules.setSetScorePlayer2(Integer.valueOf(setScorePlayers[1]),1);
     }
 
 }
