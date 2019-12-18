@@ -7,7 +7,7 @@ import simon.chareyron.coding.tennisrules.usecases.PlayAPointUseCase;
 public class BDDTennisAssertions {
 
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore) {
-        return givenTennisRuleAndInitScore(setScore, gameScore, "0-0");
+        return givenTennisRuleAndInitScore(setScore, gameScore, null);
     }
 
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore, String tieBreakScore) {
@@ -19,9 +19,11 @@ public class BDDTennisAssertions {
     }
 
     private static void initTieBreakScore(TennisScore tennisScore, String tieBreakScore) {
-        String[] tiebreakScorePlayers = tieBreakScore.split("-");
-        tennisScore.setTieBreakScorePlayer(Player._1, Integer.valueOf(tiebreakScorePlayers[0]));
-        tennisScore.setTieBreakScorePlayer(Player._2, Integer.valueOf(tiebreakScorePlayers[1]));
+        if (tieBreakScore != null) {
+            String[] tiebreakScorePlayers = tieBreakScore.split("-");
+            tennisScore.setTieBreakScorePlayer(Player._1, Integer.valueOf(tiebreakScorePlayers[0]));
+            tennisScore.setTieBreakScorePlayer(Player._2, Integer.valueOf(tiebreakScorePlayers[1]));
+        }
     }
 
     private static void initGameScore(TennisScore tennisScore, String gameScore) {

@@ -141,4 +141,12 @@ public class TennisRulesTest {
                 .thenGameScoreIs("0-0");
     }
 
+    @Test
+    public void winPointTieBreak2PointDifferenceSupPoint7() {
+        givenTennisRuleAndInitScore("6-6", "0-0", "6-0")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("7-6", "0-0")
+                .thenGameScoreIs("0-0");
+    }
+
 }

@@ -10,6 +10,10 @@ public class SetScore extends Score<Integer> {
 
     protected boolean isPlayerWon(Player winnerPointPlayer) {
 
+        return isPlayerWonWithoutTieBreak(winnerPointPlayer) || tieBreakScore != null;
+    }
+
+    private boolean isPlayerWonWithoutTieBreak(Player winnerPointPlayer) {
         return getScorePlayer(winnerPointPlayer) >= 6 && getScoreLooserPlayer(winnerPointPlayer) < 6;
     }
 
@@ -20,4 +24,6 @@ public class SetScore extends Score<Integer> {
     public void setTieBreakScore(TieBreakScore tieBreakScore) {
         this.tieBreakScore = tieBreakScore;
     }
+
+
 }
