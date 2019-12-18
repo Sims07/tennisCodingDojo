@@ -12,6 +12,9 @@ public abstract class Score<T> {
 
     private Map<Player, T> score = new HashMap();
 
+    public Score() {
+        reset();
+    }
 
     public boolean nextScoreForPlayer(Player winnerPointPlayer) {
         boolean winnerPointPlayerWon = false;
@@ -40,6 +43,14 @@ public abstract class Score<T> {
     public void reset() {
         setScorePlayer(Player._1, orderedScores[0]);
         setScorePlayer(Player._2, orderedScores[0]);
+    }
+
+    protected T getScoreLooserPlayer(Player winnerPointPlayer) {
+        return getScorePlayer(getLooserPointPlayer(winnerPointPlayer));
+    }
+
+    protected Player getLooserPointPlayer(Player winnerPointPlayer) {
+        return Player._1 == winnerPointPlayer ? Player._2 : Player._1;
     }
 
     protected abstract boolean isPlayerWon(Player winnerPointPlayer);

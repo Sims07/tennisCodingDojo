@@ -44,4 +44,11 @@ public class BDDTennisAssertion {
         then(tennisRules.getTennisScore().getGameScore().getScorePlayer2()).isEqualTo(gameScorePlayers[1]);
         return this;
     }
+
+    public BDDTennisAssertion thenTieBreakScoreIs(String expectedTieBreakScore) {
+        String[] gameScorePlayers = expectedTieBreakScore.split("-");
+        then(tennisRules.getTennisScore().getTieBreakScore().getScorePlayer1().toString()).isEqualTo(gameScorePlayers[0]);
+        then(tennisRules.getTennisScore().getTieBreakScore().getScorePlayer2().toString()).isEqualTo(gameScorePlayers[1]);
+        return this;
+    }
 }

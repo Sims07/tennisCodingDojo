@@ -20,9 +20,6 @@ public class GameScore extends Score<String> {
         return winnerPointPlayerWinTheGame;
     }
 
-    private Player getLooserPointPlayer(Player winnerPointPlayer) {
-        return Player._1 == winnerPointPlayer ? Player._2 : Player._1;
-    }
 
     protected boolean isPlayerWon(Player winnerPointPlayer) {
         return ADVANTAGE.equals(getScorePlayer(winnerPointPlayer)) && !"40".equals(getScorePlayer(getLooserPointPlayer(winnerPointPlayer)));

@@ -123,4 +123,13 @@ public class TennisRulesTest {
                 .thenGameScoreIs("0-0");
     }
 
+    @Test
+    public void winPointBeginTieBreak() {
+        givenTennisRuleAndInitScore("6-5", "30-40")
+                .whenPlayerWinPoint("2")
+                .thenSetScoreIs("6-6")
+                .thenTieBreakScoreIs("0-0")
+                .thenGameScoreIs("0-0");
+    }
+
 }

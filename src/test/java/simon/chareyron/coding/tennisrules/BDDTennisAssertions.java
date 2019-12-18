@@ -1,5 +1,6 @@
 package simon.chareyron.coding.tennisrules;
 
+import simon.chareyron.coding.tennisrules.domain.Player;
 import simon.chareyron.coding.tennisrules.domain.TennisScore;
 import simon.chareyron.coding.tennisrules.usecases.PlayAPointUseCase;
 
@@ -14,14 +15,14 @@ public class BDDTennisAssertions {
 
     private static void initGameScore(TennisScore tennisScore, String gameScore) {
         String[] gameScorePlayers = gameScore.split("-");
-        tennisScore.setGameScorePlayer1(gameScorePlayers[0]);
-        tennisScore.setGameScorePlayer2(gameScorePlayers[1]);
+        tennisScore.setGameScorePlayer(Player._1, gameScorePlayers[0]);
+        tennisScore.setGameScorePlayer(Player._2, gameScorePlayers[1]);
     }
 
     private static void initSetScore(TennisScore tennisScore, String setScore) {
         String[] setScorePlayers = setScore.split("-");
-        tennisScore.setSetScorePlayer1(Integer.valueOf(setScorePlayers[0]), 1);
-        tennisScore.setSetScorePlayer2(Integer.valueOf(setScorePlayers[1]), 1);
+        tennisScore.setSetScorePlayer(Player._1, Integer.valueOf(setScorePlayers[0]), 1);
+        tennisScore.setSetScorePlayer(Player._2, Integer.valueOf(setScorePlayers[1]), 1);
     }
 
 }

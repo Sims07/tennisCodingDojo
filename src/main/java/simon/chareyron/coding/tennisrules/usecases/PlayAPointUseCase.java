@@ -14,14 +14,18 @@ public class PlayAPointUseCase {
     public void winPoint(Player winnerPointPlayer) {
         boolean winTheGame = tennisScore.nextGameScoreForPlayer(winnerPointPlayer);
         if (winTheGame) {
-            updateGameAndSetScore(winnerPointPlayer);
+            applyWinningGameRule(winnerPointPlayer);
         }
     }
 
-    private void updateGameAndSetScore(Player winnerPointPlayer) {
+    private void applyWinningGameRule(Player winnerPointPlayer) {
         boolean winTheSet = tennisScore.nextSetScoreForPlayer(winnerPointPlayer);
-        if(winTheSet){
+        if (winTheSet) {
             tennisScore.addNewSet();
+        } else {
+            if (tennisScore.isInTieBreak()) {
+                tennisScore.beginTieBreak();
+            }
         }
         tennisScore.resetGameScore();
     }
