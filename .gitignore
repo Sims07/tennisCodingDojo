@@ -1,2 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# desjardins
+/.svn
+.settings/
+.mvn/*
+.classpath
+.project
+.checkstyle
+.fbExcludeFilterFile
+.pmdruleset.xml
+.pmd
 *.class
-target/*
+*.jar
+*.log
+*.zip
+*.exec
+*.exe
+*.war
+*.ear
+*.scss
+target/
+build/
+release.properties
+pom.xml.releaseBackup
+*.orig
+*rebel.xml
+*rebel-remote.xml
+*.iml
