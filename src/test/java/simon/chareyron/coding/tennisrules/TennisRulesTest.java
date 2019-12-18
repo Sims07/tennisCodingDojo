@@ -2,7 +2,7 @@ package simon.chareyron.coding.tennisrules;
 
 import org.junit.Test;
 
-import static simon.chareyron.coding.tennisrules.BDDTennisAssertions.*;
+import static simon.chareyron.coding.tennisrules.BDDTennisAssertions.givenTennisRuleAndInitScore;
 
 public class TennisRulesTest {
 
@@ -129,6 +129,15 @@ public class TennisRulesTest {
                 .whenPlayerWinPoint("2")
                 .thenSetScoreIs("6-6")
                 .thenTieBreakScoreIs("0-0")
+                .thenGameScoreIs("0-0");
+    }
+
+    @Test
+    public void winPointTieBreak() {
+        givenTennisRuleAndInitScore("6-6", "0-0", "0-0")
+                .whenPlayerWinPoint("1")
+                .thenSetScoreIs("6-6")
+                .thenTieBreakScoreIs("1-0")
                 .thenGameScoreIs("0-0");
     }
 

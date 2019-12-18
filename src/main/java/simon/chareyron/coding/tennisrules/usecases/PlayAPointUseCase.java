@@ -1,6 +1,7 @@
 package simon.chareyron.coding.tennisrules.usecases;
 
 import simon.chareyron.coding.tennisrules.domain.Player;
+import simon.chareyron.coding.tennisrules.domain.Score;
 import simon.chareyron.coding.tennisrules.domain.TennisScore;
 
 public class PlayAPointUseCase {
@@ -12,10 +13,15 @@ public class PlayAPointUseCase {
     }
 
     public void winPoint(Player winnerPointPlayer) {
-        boolean winTheGame = tennisScore.nextGameScoreForPlayer(winnerPointPlayer);
+        Score<?> scoreToUpdate = selectGameOrTieBreakScoreToUpdate();
+        boolean winTheGame = scoreToUpdate.nextScoreForPlayer(winnerPointPlayer);
         if (winTheGame) {
             applyWinningGameRule(winnerPointPlayer);
         }
+    }
+
+    private Score<?> selectGameOrTieBreakScoreToUpdate() {
+        return tennisScore.isInTieBreak() ? tennisScore.getTieBreakScore() : tennisScore.getGameScore();
     }
 
     private void applyWinningGameRule(Player winnerPointPlayer) {

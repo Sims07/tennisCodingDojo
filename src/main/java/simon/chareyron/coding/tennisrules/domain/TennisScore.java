@@ -2,6 +2,7 @@ package simon.chareyron.coding.tennisrules.domain;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class TennisScore {
     private int currentSet;
@@ -73,5 +74,18 @@ public class TennisScore {
 
     private SetScore getCurrentSetScore() {
         return setScores.get(currentSet);
+    }
+
+    public void setTieBreakScorePlayer(Player player, int gameScorePlayer) {
+        TieBreakScore tieBreakScoreToUpdate = Optional
+                .ofNullable(getCurrentSetScore())
+                .map(SetScore::getTieBreakScore)
+                .orElse(new TieBreakScore());
+        tieBreakScoreToUpdate.setScorePlayer(player, gameScorePlayer);
+        getCurrentSetScore().setTieBreakScore(tieBreakScoreToUpdate);
+    }
+
+    public boolean nextTieBreakScoreForPlayer(Player winnerPointPlayer) {
+        return getCurrentSetScore().getTieBreakScore().nextScoreForPlayer(winnerPointPlayer);
     }
 }
