@@ -5,6 +5,10 @@ import simon.chareyron.coding.tennisrules.domain.TennisScore;
 
 public class BDDTennisAssertions {
 
+    private BDDTennisAssertions() {
+        //
+    }
+
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore) {
         return givenTennisRuleAndInitScore(setScore, gameScore, null);
     }
@@ -14,14 +18,14 @@ public class BDDTennisAssertions {
         initSetScore(tennisScore, setScore);
         initGameScore(tennisScore, gameScore);
         initTieBreakScore(tennisScore, tieBreakScore);
-        return new BDDTennisAssertion(() -> tennisScore, setScore, gameScore);
+        return new BDDTennisAssertion(tennisScore);
     }
 
     private static void initTieBreakScore(TennisScore tennisScore, String tieBreakScore) {
         if (tieBreakScore != null) {
             String[] tiebreakScorePlayers = tieBreakScore.split("-");
-            tennisScore.setTieBreakScorePlayer(Player._1, Integer.valueOf(tiebreakScorePlayers[0]));
-            tennisScore.setTieBreakScorePlayer(Player._2, Integer.valueOf(tiebreakScorePlayers[1]));
+            tennisScore.setTieBreakScorePlayer(Player._1, Integer.parseInt(tiebreakScorePlayers[0]));
+            tennisScore.setTieBreakScorePlayer(Player._2, Integer.parseInt(tiebreakScorePlayers[1]));
         }
     }
 
@@ -33,8 +37,8 @@ public class BDDTennisAssertions {
 
     private static void initSetScore(TennisScore tennisScore, String setScore) {
         String[] setScorePlayers = setScore.split("-");
-        tennisScore.setSetScorePlayer(Player._1, Integer.valueOf(setScorePlayers[0]), 1);
-        tennisScore.setSetScorePlayer(Player._2, Integer.valueOf(setScorePlayers[1]), 1);
+        tennisScore.setSetScorePlayer(Player._1, Integer.parseInt(setScorePlayers[0]), 1);
+        tennisScore.setSetScorePlayer(Player._2, Integer.parseInt(setScorePlayers[1]), 1);
     }
 
 }
