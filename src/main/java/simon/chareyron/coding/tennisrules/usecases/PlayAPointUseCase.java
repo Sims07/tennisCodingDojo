@@ -1,42 +1,18 @@
 package simon.chareyron.coding.tennisrules.usecases;
 
 import simon.chareyron.coding.tennisrules.domain.Player;
-import simon.chareyron.coding.tennisrules.domain.Score;
-import simon.chareyron.coding.tennisrules.domain.TennisScore;
+import simon.chareyron.coding.tennisrules.domain.TennisRules;
 
 public class PlayAPointUseCase {
 
-    private TennisScore tennisScore;
+    private TennisRules tennisRules;
 
-    public PlayAPointUseCase(TennisScore tennisScore) {
-        this.tennisScore = tennisScore;
+    public PlayAPointUseCase(InputTennisScorePort inputScorePort) {
+        this.tennisRules = new TennisRules(inputScorePort.getTennisScore());
     }
 
     public void winPoint(Player winnerPointPlayer) {
-        Score<?> scoreToUpdate = selectGameOrTieBreakScoreToUpdate();
-        boolean winTheGame = scoreToUpdate.nextScoreForPlayer(winnerPointPlayer);
-        if (winTheGame) {
-            applyWinningGameRule(winnerPointPlayer);
-        }
+        tennisRules.winPoint(winnerPointPlayer);
     }
 
-    private Score<?> selectGameOrTieBreakScoreToUpdate() {
-        return tennisScore.isInTieBreak() ? tennisScore.getTieBreakScore() : tennisScore.getGameScore();
-    }
-
-    private void applyWinningGameRule(Player winnerPointPlayer) {
-        boolean winTheSet = tennisScore.nextSetScoreForPlayer(winnerPointPlayer);
-        if (winTheSet) {
-            tennisScore.addNewSet();
-        } else {
-            if (tennisScore.isInTieBreak()) {
-                tennisScore.beginTieBreak();
-            }
-        }
-        tennisScore.resetGameScore();
-    }
-
-    public TennisScore getTennisScore() {
-        return tennisScore;
-    }
 }

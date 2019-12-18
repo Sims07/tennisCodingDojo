@@ -2,7 +2,6 @@ package simon.chareyron.coding.tennisrules;
 
 import simon.chareyron.coding.tennisrules.domain.Player;
 import simon.chareyron.coding.tennisrules.domain.TennisScore;
-import simon.chareyron.coding.tennisrules.usecases.PlayAPointUseCase;
 
 public class BDDTennisAssertions {
 
@@ -15,7 +14,7 @@ public class BDDTennisAssertions {
         initSetScore(tennisScore, setScore);
         initGameScore(tennisScore, gameScore);
         initTieBreakScore(tennisScore, tieBreakScore);
-        return new BDDTennisAssertion(new PlayAPointUseCase(tennisScore), setScore, gameScore);
+        return new BDDTennisAssertion(() -> tennisScore, setScore, gameScore);
     }
 
     private static void initTieBreakScore(TennisScore tennisScore, String tieBreakScore) {

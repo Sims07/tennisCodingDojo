@@ -34,10 +34,6 @@ public class TennisScore {
         return this.gameScore;
     }
 
-    public boolean nextGameScoreForPlayer(Player winnerPointPlayer) {
-        return gameScore.nextScoreForPlayer(winnerPointPlayer);
-    }
-
     public boolean nextSetScoreForPlayer(Player winnerPointPlayer) {
         return getCurrentSetScore().nextScoreForPlayer(winnerPointPlayer);
     }
@@ -83,9 +79,5 @@ public class TennisScore {
                 .orElse(new TieBreakScore());
         tieBreakScoreToUpdate.setScorePlayer(player, gameScorePlayer);
         getCurrentSetScore().setTieBreakScore(tieBreakScoreToUpdate);
-    }
-
-    public boolean nextTieBreakScoreForPlayer(Player winnerPointPlayer) {
-        return getCurrentSetScore().getTieBreakScore().nextScoreForPlayer(winnerPointPlayer);
     }
 }
