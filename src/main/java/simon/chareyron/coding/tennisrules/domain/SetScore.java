@@ -21,9 +21,15 @@ public class SetScore extends Score<Integer> {
         return this.tieBreakScore;
     }
 
+    public boolean isInTieBreak() {
+        return getScorePlayer1() == 6 && getScorePlayer1().equals(getScorePlayer2());
+    }
+
     public void setTieBreakScore(TieBreakScore tieBreakScore) {
         this.tieBreakScore = tieBreakScore;
     }
 
-
+    public Player getWinninPlayer() {
+        return isPlayerWon(Player._1)?Player._1:Player._2;
+    }
 }

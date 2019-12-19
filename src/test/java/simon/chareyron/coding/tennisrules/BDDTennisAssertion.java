@@ -5,22 +5,22 @@ import static org.assertj.core.api.BDDAssertions.then;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 import simon.chareyron.coding.tennisrules.domain.Player;
-import simon.chareyron.coding.tennisrules.domain.TennisRules;
+import simon.chareyron.coding.tennisrules.domain.Referee;
 import simon.chareyron.coding.tennisrules.domain.TennisScore;
 
 public class BDDTennisAssertion {
 
-    private final TennisRules tennisRules;
+    private final Referee referee;
     private final TennisScore tennisScore;
 
-    public BDDTennisAssertion(TennisScore tennisScore) {
-        this.tennisRules = new TennisRules(tennisScore);
+    public BDDTennisAssertion(TennisScore tennisScore, int nbWinningSet) {
+        this.referee = new Referee(tennisScore, nbWinningSet);
         this.tennisScore = tennisScore;
     }
 
     public BDDTennisAssertion whenPlayerWinPoint(String winnerPointPlayer) {
         Player player = "1".equals(winnerPointPlayer) ? Player._1 : Player._2;
-        tennisRules.winPoint(player);
+        referee.winPoint(player);
         return this;
     }
 
@@ -47,5 +47,13 @@ public class BDDTennisAssertion {
         then(tennisScore.getTieBreakScore().getScorePlayer1().toString()).isEqualTo(gameScorePlayers[0]);
         then(tennisScore.getTieBreakScore().getScorePlayer2().toString()).isEqualTo(gameScorePlayers[1]);
         return this;
+    }
+
+    public void thenWinningPlayerIs(String winningPlayer) {
+        then(formatPlayer()).isEqualTo(winningPlayer);
+    }
+
+    private String formatPlayer() {
+        return referee.getWiningPlayer() == Player._1 ? "1" : "2";
     }
 }

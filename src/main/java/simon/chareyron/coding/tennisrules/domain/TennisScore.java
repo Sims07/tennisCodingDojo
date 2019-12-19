@@ -1,12 +1,13 @@
 package simon.chareyron.coding.tennisrules.domain;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 public class TennisScore {
-    private int currentSet;
     private Map<Integer, SetScore> setScores;
+    private int currentSet;
     private GameScore gameScore;
 
     public TennisScore() {
@@ -20,18 +21,9 @@ public class TennisScore {
         setScores.put(currentSet, new SetScore());
     }
 
-    public void setSetScorePlayer(Player player, int setScorePlayer1, int setNumber) {
+    public void setSetScorePlayer(Player player, int setScorePlayer, int setNumber) {
         SetScore setScoreToUpdate = getOrCreateSetScore(setNumber);
-        setScoreToUpdate.setScorePlayer(player, setScorePlayer1);
-    }
-
-    public SetScore getSetScore(int setNumber) {
-        return setScores.get(setNumber);
-    }
-
-
-    public GameScore getGameScore() {
-        return this.gameScore;
+        setScoreToUpdate.setScorePlayer(player, setScorePlayer);
     }
 
     public boolean nextSetScoreForPlayer(Player winnerPointPlayer) {
@@ -42,13 +34,18 @@ public class TennisScore {
         gameScore.reset();
     }
 
-
     public TieBreakScore getTieBreakScore() {
         return getCurrentSetScore().getTieBreakScore();
     }
 
     public boolean isInTieBreak() {
-        return getCurrentSetScore().getScorePlayer1() == 6 && getCurrentSetScore().getScorePlayer1() == getCurrentSetScore().getScorePlayer2();
+        return getCurrentSetScore().isInTieBreak();
+    }
+
+    public void setTieBreakScorePlayer(Player player, int gameScorePlayer) {
+        TieBreakScore tieBreakScoreToUpdate = Optional.ofNullable(getCurrentSetScore()).map(SetScore::getTieBreakScore).orElse(new TieBreakScore());
+        tieBreakScoreToUpdate.setScorePlayer(player, gameScorePlayer);
+        getCurrentSetScore().setTieBreakScore(tieBreakScoreToUpdate);
     }
 
     public void beginTieBreak() {
@@ -57,6 +54,10 @@ public class TennisScore {
 
     public void setGameScorePlayer(Player player, String gameScorePlayer) {
         getGameScore().setScorePlayer(player, gameScorePlayer);
+    }
+
+    public Collection<SetScore> getSetsScore() {
+        return setScores.values();
     }
 
     private SetScore getOrCreateSetScore(int setNumber) {
@@ -72,12 +73,12 @@ public class TennisScore {
         return setScores.get(currentSet);
     }
 
-    public void setTieBreakScorePlayer(Player player, int gameScorePlayer) {
-        TieBreakScore tieBreakScoreToUpdate = Optional
-                .ofNullable(getCurrentSetScore())
-                .map(SetScore::getTieBreakScore)
-                .orElse(new TieBreakScore());
-        tieBreakScoreToUpdate.setScorePlayer(player, gameScorePlayer);
-        getCurrentSetScore().setTieBreakScore(tieBreakScoreToUpdate);
+    public SetScore getSetScore(int setNumber) {
+        return setScores.get(setNumber);
     }
+
+    public GameScore getGameScore() {
+        return this.gameScore;
+    }
+
 }

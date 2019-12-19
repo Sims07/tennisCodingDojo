@@ -2,6 +2,7 @@ package simon.chareyron.coding.tennisrules;
 
 import static simon.chareyron.coding.tennisrules.BDDTennisAssertions.givenTennisRuleAndInitScore;
 
+import java.util.Arrays;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -159,6 +160,33 @@ public class TennisRulesTest {
                     .whenPlayerWinPoint("1")
                     .thenSetScoreIs("7-6", "0-0")
                     .thenGameScoreIs("0-0");
+        }
+    }
+
+    @Nested
+    class MatchEndRulesTest {
+        @Test
+        public void winAMatchPlayer1() {
+            givenTennisRuleAndInitScore(Arrays.asList("7-5", "5-2"),2, "40-0")
+                    .whenPlayerWinPoint("1")
+                    .thenSetScoreIs("7-5", "6-2")
+                    .thenWinningPlayerIs("1");
+        }
+
+        @Test
+        public void winAMatchPlayer2() {
+            givenTennisRuleAndInitScore(Arrays.asList("0-6", "0-5"),2, "15-40")
+                    .whenPlayerWinPoint("2")
+                    .thenSetScoreIs("0-6", "0-6")
+                    .thenWinningPlayerIs("2");
+        }
+
+        @Test
+        public void winAMatchPlayer1Set3() {
+            givenTennisRuleAndInitScore(Arrays.asList("0-6", "0-6","0-5"),3, "15-40")
+                    .whenPlayerWinPoint("2")
+                    .thenSetScoreIs("0-6", "0-6", "0-6")
+                    .thenWinningPlayerIs("2");
         }
     }
 

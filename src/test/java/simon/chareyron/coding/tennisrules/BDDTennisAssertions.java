@@ -1,5 +1,8 @@
 package simon.chareyron.coding.tennisrules;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import simon.chareyron.coding.tennisrules.domain.Player;
 import simon.chareyron.coding.tennisrules.domain.TennisScore;
 
@@ -9,16 +12,23 @@ public class BDDTennisAssertions {
         //
     }
 
+    public static BDDTennisAssertion givenTennisRuleAndInitScore(List<String> setScores, int nbWinningSet, String gameScore) {
+        TennisScore tennisScore = new TennisScore();
+        initSetScore(tennisScore, setScores);
+        initGameScore(tennisScore, gameScore);
+        return new BDDTennisAssertion(tennisScore, nbWinningSet);
+    }
+
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore) {
         return givenTennisRuleAndInitScore(setScore, gameScore, null);
     }
 
     public static BDDTennisAssertion givenTennisRuleAndInitScore(String setScore, String gameScore, String tieBreakScore) {
         TennisScore tennisScore = new TennisScore();
-        initSetScore(tennisScore, setScore);
+        initSetScore(tennisScore, Collections.singletonList(setScore));
         initGameScore(tennisScore, gameScore);
         initTieBreakScore(tennisScore, tieBreakScore);
-        return new BDDTennisAssertion(tennisScore);
+        return new BDDTennisAssertion(tennisScore, 2);
     }
 
     private static void initTieBreakScore(TennisScore tennisScore, String tieBreakScore) {
@@ -35,10 +45,17 @@ public class BDDTennisAssertions {
         tennisScore.setGameScorePlayer(Player._2, gameScorePlayers[1]);
     }
 
-    private static void initSetScore(TennisScore tennisScore, String setScore) {
-        String[] setScorePlayers = setScore.split("-");
-        tennisScore.setSetScorePlayer(Player._1, Integer.parseInt(setScorePlayers[0]), 1);
-        tennisScore.setSetScorePlayer(Player._2, Integer.parseInt(setScorePlayers[1]), 1);
+    private static void initSetScore(TennisScore tennisScore, List<String> setScores) {
+        AtomicInteger setNumber = new AtomicInteger(1);
+        setScores.forEach(setScore -> {
+            String[] setScorePlayers = setScore.split("-");
+            tennisScore.setSetScorePlayer(Player._1, Integer.parseInt(setScorePlayers[0]), setNumber.get());
+            tennisScore.setSetScorePlayer(Player._2, Integer.parseInt(setScorePlayers[1]), setNumber.get());
+            if (setNumber.get() < setScores.size()) {
+                tennisScore.addNewSet();
+                setNumber.getAndIncrement();
+            }
+        });
     }
 
 }
