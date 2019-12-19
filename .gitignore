@@ -24,6 +24,7 @@ npm-debug.log*
 *.scss
 target/
 build/
+.idea/
 release.properties
 pom.xml.releaseBackup
 *.orig
