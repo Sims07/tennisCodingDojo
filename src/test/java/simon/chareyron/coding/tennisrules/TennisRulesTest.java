@@ -101,6 +101,14 @@ public class TennisRulesTest {
                     .thenSetScoreIs("0-1")
                     .thenGameScoreIs("0-0");
         }
+
+        @Test
+        public void winAPointAndGameAtSet5ToSet6() {
+            givenTennisRuleAndInitScore("5-5", "40-15")
+                    .whenPlayerWinPoint("1")
+                    .thenSetScoreIs("6-5")
+                    .thenGameScoreIs("0-0");
+        }
     }
 
     @Nested

@@ -5,7 +5,7 @@ public class SetScore extends Score<Integer> {
     private TieBreakScore tieBreakScore;
 
     protected Integer[] initOrderedScores() {
-        return new Integer[]{0, 1, 2, 3, 4, 5, 6, 7};
+        return new Integer[] { 0, 1, 2, 3, 4, 5, 6, 7 };
     }
 
     protected boolean isPlayerWon(Player winnerPointPlayer) {
@@ -14,7 +14,8 @@ public class SetScore extends Score<Integer> {
     }
 
     private boolean isPlayerWonWithoutTieBreak(Player winnerPointPlayer) {
-        return getScorePlayer(winnerPointPlayer) >= 6 && getScoreLooserPlayer(winnerPointPlayer) < 6;
+        return getScorePlayer(winnerPointPlayer) == 6 && getScoreLooserPlayer(winnerPointPlayer) < 5
+                || getScorePlayer(winnerPointPlayer) == 7 && getScoreLooserPlayer(winnerPointPlayer) == 5;
     }
 
     public TieBreakScore getTieBreakScore() {
@@ -30,6 +31,6 @@ public class SetScore extends Score<Integer> {
     }
 
     public Player getWinninPlayer() {
-        return isPlayerWon(Player._1)?Player._1:Player._2;
+        return isPlayerWon(Player._1)?Player._1: isPlayerWon(Player._2) ? Player._2 : null;
     }
 }
